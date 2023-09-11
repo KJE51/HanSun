@@ -11,7 +11,7 @@ def payment():
     if request.method == 'POST':
         URL = 'https://kapi.kakao.com/v1/payment/ready'
         headers = {
-            'Authorization': "KakaoAK " + "1cb3f6135e11fa98d28aed44ac58920b",
+            'Authorization': "KakaoAK " + "",
             "Content-type": "application/x-www-form-urlencoded;charset=utf-8",
         }
         params = {
@@ -39,7 +39,7 @@ def payment():
 def sucess():
     URL = 'https://kapi.kakao.com/v1/payment/approve'
     headers = {
-        "Authorization": "KakaoAK " + "1cb3f6135e11fa98d28aed44ac58920b",
+        "Authorization": "KakaoAK " + "",
         "Content-type": "application/x-www-form-urlencoded;charset=utf-8",
     }
     params = {
@@ -70,7 +70,7 @@ def sucess():
 def cancel():
     URL = "https://kapi.kakao.com/v1/payment/order"
     headers = {
-        "Authorization": "KakaoAK " + "1cb3f6135e11fa98d28aed44ac58920b",
+        "Authorization": "KakaoAK " + "",
         "Content-type": "application/x-www-form-urlencoded;charset=utf-8",
     }
     params = {
