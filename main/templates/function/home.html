@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+    #submit{
+        border:1px solid navy;
+        background-color: navy;
+        color:white;
+    }
+</style>
+<div class="container">
+    <h5 class="my-3 border-bottom pb-2">한글이 선명해</h5>
+    <p>화질이 저하된 문서 이미지를 고화질로 변환한 후 텍스트와 함께 제공합니다.<br>
+    변환하고 싶은 이미지를 아래에 업로드해주세요.<br>
+    회원가입이 필요한 서비스입니다.<br><br></p>
+
+    {% if g.user.email %}
+        <form method="post" enctype="multipart/form-data">
+            <div class="button">
+                <label for="a">
+                    <input type="file" id="file" 
+                    name="file" accept="image/*" onchange="loadFile(this)">
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary">제출</button>
+     </form>
+    
+    {% else %}
+    <p>회원가입 후 이용해주세요.</p>
+    {% endif %}
+</div>
+{% endblock %}

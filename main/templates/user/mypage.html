@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    사용자 이메일: {{g.user.email}}<br>
+    
+    남은 무료 횟수: {{freeNum}}<br>
+    남은 유료 횟수: {{payNum}}
+</div>
+<br>
+<li class="button">
+    <a class="button" href="{{ url_for('payment.payment') }}">유료 횟수 결제하기</a>
+</li> 
+
+{% endblock %}

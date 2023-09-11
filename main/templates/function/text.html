@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+<h5 class="my-3 border-bottom pb-2">한글이 선명해</h5>
+<p>이미지 개선을 마친 문서와 텍스트 입니다.<br><br></p>
+<div style="float: left;margin-right:10px;">
+    <img src="{{ url_for('static', filename='new.png') }}" width="300">
+</div>
+<div style="float: left;">
+    <p><textarea cols="50" rows="15">{{text}}</textarea></p>
+</div>
+</div>
+{% endblock %}
