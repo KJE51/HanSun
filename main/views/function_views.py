@@ -29,8 +29,8 @@ def home():
 
         path = "main/static/new.png"
         f = [('file', open(path,'rb'))]
-        url = 'https://aaguz3sbgl.apigw.ntruss.com/custom/v1/18353/3e9235be8426d15a2758460a365663a7e330221e3fb691996fe7f668f94a68b6/general'
-        secret_key = 'aGNDeVNhZll2Q0ZVbHByTkdpVWJOYlVsVUJES1hlVHM='
+        url = ''
+        secret_key = ''
 
         request_json = {'images': [{'format': 'png',
                                 'name': 'demo'}],
